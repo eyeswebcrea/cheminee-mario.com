@@ -1,0 +1,117 @@
+{% extends "::base.html.twig" %}
+
+{% block bandeau %} 
+{{ parent() }}
+<div class="block block-3-line block-design-sample" id="presentation-home">
+	<div class="block-content">
+		{% for article in boucleArticles({ "idArticle" : 1}) %}
+			{{ article.texte | raw }}
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+	    {% 
+        		stylesheets output='css/mercerie.css' 
+        		'@SittlerHomeBundle/Resources/public/css/index.css'
+        %}        		
+        	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+        {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+	<div id="fond-index" class="span-24">
+	<div class="span-22 prepend-1 last prepend-top item-list">
+		<div class="block block-6-line span-8 append-1 prepend-top item">
+			{% for rubrique in boucleRubriques({ "idRubrique" : 2 }) %}
+				<a href="catalogue/list">
+					<img class="lightsrcshot" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(350,265) }}" alt="{{ rubrique.titre }}">
+					<span class="item-inserts-titre">{{ rubrique.titre }}</span>
+				</a>
+			{% endfor %}
+		</div>
+		<div class="block block-6-line span-7 prepend-1 last prepend-top item">
+			{% for rubrique in boucleRubriques({ "idRubrique" : 27 }) %}
+				<a href="catalogue/list">
+					<img class="lightsrcshot" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(205,265) }}" alt="{{ rubrique.titre }}">
+					<span class="item-poeles-titre">{{ rubrique.titre }}</span>
+				</a>
+			{% endfor %}
+		</div>
+		<div class="block block-6-line span-4   last prepend-top distri">
+			<p class="distributeur-texte">Distributeurs de</p>
+			{% for rubrique in boucleRubriques({ "idRubrique" : 52 }) %}
+				<a href="http://www.jide.be">
+					<img class="distri-logo1" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(150,80) }}" alt="{{ rubrique.titre }}">
+				</a>
+			{% endfor %}
+			{% for rubrique in boucleRubriques({ "idRubrique" : 53 }) %}
+				<a href="http://www.cera-kaminofen.de/fr/poeles/">
+					<img class="distri-logo2" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(150,80) }}" alt="{{ rubrique.titre }}">
+				</a>
+			{% endfor %}
+			{% for rubrique in boucleRubriques({ "idRubrique" : 54 }) %}
+				<a href="http://www.spartherm.com/">
+					<img class="distri-logo3" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(150,80) }}" alt="{{ rubrique.titre }}">
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="span-22 prepend-1 last prepend-top item-list">
+		<div class="block block-6-line span-8 append-1 prepend-top item">
+			{% for rubrique in boucleRubriques({ "idRubrique" : 3 }) %}
+				<a href="catalogue/list">
+					<img class="lightsrcshot" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(350,265) }}" alt="{{ rubrique.titre }}">
+					<span class="item-cheminees-titre">{{ rubrique.titre }}</span>
+				</a>
+			{% endfor %}
+		</div>
+		<div class="block block-6-line span-7 prepend-1 last prepend-top item">
+			<div class="block block-2-line span-7  item">
+				{% for rubrique in boucleRubriques({ "idRubrique" : 9 }) %}
+					<a href="services">
+						<img class="lightsrcshot" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(205,100) }}" alt="{{ rubrique.titre }}">
+						<span class="item-service-titre">{{ rubrique.titre }}</span>
+					</a>
+				{% endfor %}
+			</div>
+			<div class="block block-4-line span-7 last prepend-top item">
+				{% for rubrique in boucleRubriques({ "idRubrique" : 49 }) %}
+					<a href="services">
+						<img class="lightsrcshot" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(205,149) }}" alt="{{ rubrique.titre }}">
+						<span class="item-accessoires-titre">{{ rubrique.titre }}</span>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="block block-6-line span-4   last prepend-top certi">
+			<p class="certification-texte">Nos certifications :</p>
+			{% for rubrique in boucleRubriques({ "idRubrique" : 56 }) %}
+				<a href="http://www.qualit-enr.org/">
+					<img class="certi-logo1" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(150,80) }}" alt="{{ rubrique.titre }}">
+				</a>
+			{% endfor %}
+			{% for rubrique in boucleRubriques({ "idRubrique" : 57 }) %}
+				<a href="http://www.qualit-enr.org/charte-qualibois">
+					<img class="certi-logo2" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(150,80) }}" alt="{{ rubrique.titre }}">
+				</a>
+			{% endfor %}
+			{% for rubrique in boucleRubriques({ "idRubrique" : 58 }) %}
+				<a href="http://www.youtube.com/user/chemineesflamespace?feature=watch">
+					<img class="certi-logo3" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).forceResize(150,80) }}" alt="{{ rubrique.titre }}">
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+	</div>
+<!--	<div class="block block-4-line span-20 prepend-2 last prepend-top append-bottom item">
+			{% for rubrique in boucleRubriques({ "idRubrique" : 3 }) %}
+				<a href="mercerie">
+					<img class="lightsrcshot" src="{{ image(rubrique.getPathAbsoluteLocalLogo()).crop(30,100,790,100) }}" alt="{{ rubrique.titre }}">
+					<span class="item-titre">{{ rubrique.titre }}</span>
+				</a>
+			{% endfor %}
+</div>    -->
+
+{% endblock %}

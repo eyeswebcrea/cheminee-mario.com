@@ -1,0 +1,57 @@
+{% extends "::base.html.twig" %}
+
+{% block bandeau %} 
+	{% include "::bandeau.html.twig" with {"idRubriqueBandeau" : 7, "hauteurBandeau" : 250} %}
+	<div class="block block-3-line block-design-sample" id="presentation-home">
+			<div class="block-content">
+				{% for article in boucleArticles({ "idArticle" : 1}) %}
+					{{ article.texte | raw }}
+				{% endfor %}
+			</div>
+	</div>
+{% endblock %}
+
+
+{% block stylesheets %}
+	    {% 
+        		stylesheets output='css/mercerie.css' 
+        		'@SittlerHomeBundle/Resources/public/css/mercerie.css'
+        %}        		
+        	<link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+        {% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+	 <div id="fond-realisation" class="span-24">
+		<div class="realisation-list span-24 prepend-top append-bottom">
+			{% for article in boucleArticles({ "idRubrique" : 82 }) %}
+			<div class="realisation-item  span-10 {% if loop.index % 2 == 0 %}last{% else %}append-1{% endif %} prepend-top block block-6-line">
+				<div class="realisation-logo span-6"><img src="{{ image(article.getPathAbsoluteLocalLogo()).resize(400,280) }}" alt="{{ article.titre }}"></div>
+				<div class="realisation-conteneur-contenu span-6 last">
+					<h3 class="realisation-titre"> </h3>
+				</div>
+			</div>
+		{% endfor %}
+		</div> 
+		<div class="realisation-list span-24 prepend-top append-bottom">
+			{% for article in boucleArticles({ "idRubrique" : 84 }) %}
+			<div class="realisation-item  span-10 {% if loop.index % 2 == 0 %}last{% else %}append-1{% endif %} prepend-top block block-6-line">
+				<div class="realisation-logo span-6"><img src="{{ image(article.getPathAbsoluteLocalLogo()).resize(400,280) }}" alt="{{ article.titre }}"></div>
+				<div class="realisation-conteneur-contenu span-6 last">
+					<h3 class="realisation-titre"> </h3>
+				</div>
+			</div>
+		{% endfor %}
+		</div> 
+		<div class="realisation-list span-24 prepend-top append-bottom">
+			{% for article in boucleArticles({ "idRubrique" : 83 }) %}
+			<div class="realisation-item  span-10 {% if loop.index % 2 == 0 %}last{% else %}append-1{% endif %} prepend-top block block-6-line">
+				<div class="realisation-logo span-6"><img src="{{ image(article.getPathAbsoluteLocalLogo()).resize(400,280) }}" alt="{{ article.titre }}"></div>
+				<div class="realisation-conteneur-contenu span-6 last">
+					<h3 class="realisation-titre"> </h3>
+				</div>
+			</div>
+		{% endfor %}
+		</div>     
+	</div>		
+{% endblock %}

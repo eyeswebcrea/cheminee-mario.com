@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block bandeau %} 
+		{% include "::bandeau.html.twig" with {"idRubriqueBandeau" : 7, "hauteurBandeau" : 250} %}
+		<div class="block block-3-line block-design-sample" id="presentation-home">
+			<div class="block-content">
+				{% for article in boucleArticles({ "idArticle" : 1}) %}
+					{{ article.texte | raw }}
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}
+
+{% block body %}
+		<div id="fond-services" class="span-24">
+			<div class="article-list span-20 prepend-2 append-2 last append-bottom">
+				{% for article in boucleArticles({ "idRubrique" : 8 },{}, 3) %}
+					<div class="article span-20 last prepend-top">
+						<div class="article-logo span-8 prepend-top">
+							<img src="{{ image(article.getPathAbsoluteLocalLogo()).forceResize(270,250) }}">
+						</div>
+						<div class="article-conteneur-contenu span-12 last prepend-top">
+							<h3 class="article-titre">{{ article.titre  }}</h3>
+							<div class="article-contenu">
+								<p>
+									{{ article.texte | raw }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}

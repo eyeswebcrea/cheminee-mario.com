@@ -1,0 +1,42 @@
+div#contact h2 {
+	color: white;
+	border-bottom: solid #C3C3C3 2px;
+}
+
+div#conteneur-bandeau {
+	display: none;
+}
+
+div#formulaire-contact {
+	padding-top: 50px;
+	margin-left: -30px;
+}
+
+div#plan-acces {
+	padding-top: 20px;
+	margin-left: 10px;
+}
+div#affichage-logo {
+	padding-top:75px;
+}
+
+div#adresse-logo {
+	padding-top:100px;
+}
+div#adress-logo h2 {
+	color: white;
+	
+}
+div#champs-haut {
+	
+}
+div#distri-jde {
+	padding-top: 20px;
+}
+div#distri-cera {
+	padding-top: 20px;
+	margin-left: 60px;
+}
+div#distri-spartherm {
+	padding-top: 20px;
+}

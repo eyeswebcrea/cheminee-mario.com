@@ -1,0 +1,195 @@
+span.item-inserts-titre {
+	font-family: 'Prosto One', cursive; 
+	font-weight: bold;
+	 position: absolute; 
+	 bottom: 20px; 
+	 left: 100px;
+	 width: 40%;
+
+	 padding-top: 2px; 
+	 padding-bottom: 2px; 
+	 text-align: center; 
+	 text-decoration: none; 
+	 font-size: 16px; 
+	 display: block;
+	 background: #76533e; 
+	 color: white;
+}
+
+span.item-inserts-titre:first-letter {
+	font-size: 20px;
+}
+
+div.item:hover  span.item-inserts-titre
+{
+	background: #C3C3C3;
+	color: #76533e;
+}
+span.item-poeles-titre {
+	font-family: 'Prosto One', cursive; 
+	font-weight: bold;
+	 position: absolute; 
+	 bottom: 30px; 
+	 left: 30px;
+	 width: 65%;
+
+	 padding-top: 2px; 
+	 padding-bottom: 2px; 
+	 text-align: center; 
+	 text-decoration: none; 
+	 font-size: 16px; 
+	 display: block;
+	 background: #76533e; 
+	 color: white;
+}
+
+span.item-poeles-titre:first-letter {
+	font-size: 20px;
+}
+
+div.item:hover  span.item-poeles-titre
+{
+	background: #C3C3C3;
+	color: #76533e;
+}
+span.item-cheminees-titre {
+	font-family: 'Prosto One', cursive; 
+	font-weight: bold;
+	 position: absolute; 
+	 bottom: 20px; 
+	 left: 90px;
+	 width: 60%;
+
+	 padding-top: 2px; 
+	 padding-bottom: 2px; 
+	 text-align: center; 
+	 text-decoration: none; 
+	 font-size: 16px; 
+	 display: block;
+	 background: #76533e; 
+	 color: white;
+}
+
+span.item-cheminees-titre:first-letter {
+	font-size: 20px;
+}
+
+div.item:hover  span.item-cheminees-titre
+{
+	background: #C3C3C3;
+	color: #76533e;
+}
+span.item-accessoires-titre {
+	font-family: 'Prosto One', cursive; 
+	font-weight: bold;
+	 position: absolute; 
+	 top: 10px; 
+	 left: 10px;
+	 width: 40%;
+
+	 padding-top: 2px; 
+	 padding-bottom: 2px; 
+	 text-align: center; 
+	 text-decoration: none; 
+	 font-size: 12px; 
+	 display: block;
+	 background: #76533e; 
+	 color: white;
+}
+
+span.item-accessoires-titre:first-letter {
+	font-size: 15px;
+}
+
+div.item:hover  span.item-accessoires-titre
+{
+	background: #C3C3C3;
+	color: #76533e;
+}
+span.item-service-titre {
+	font-family: 'Prosto One', cursive; 
+	font-weight: bold;
+	 position: absolute; 
+	 top: 15px; 
+	 left: 10px;
+	 width: 40%;
+
+	 padding-top: 2px; 
+	 padding-bottom: 2px; 
+	 text-align: left; 
+	 text-decoration: none; 
+	 font-size: 12px; 
+	 display: block;
+	 background: #76533e; 
+	 color: white;
+}
+
+span.item-service-titre:first-letter {
+	font-size: 15px;
+}
+
+div.item:hover  span.item-service-titre
+{
+	background: #C3C3C3;
+	color: #76533e;
+}
+div.item a {
+	position: relative;
+	display: block;
+}
+
+div.item {
+	-webkit-transition-property: all;
+  	-webkit-transition-duration: 350ms;
+  	-webkit-transition-timing-function: ease-in-out;
+  	-moz-transition-property: all;
+  	-moz-transition-duration: 350ms;
+  	-moz-transition-timing-function: ease-in-out;
+}
+
+div.item:hover {
+
+	-webkit-transform:scale(1.1); //Chrome, Safar
+	
+
+	-moz-transform:scale(1.1); //Chrome, Safar
+
+}
+div.distri p.distributeur-texte {
+	margin-top: -15px;
+	text-align: left;
+	padding-left: 15px;
+	font-size: 18px;
+	color: white;
+}
+div.distri img.distri-logo1 {
+	margin-top: -15px;
+	padding-left: 30px;
+}
+div.distri img.distri-logo2 {
+	margin-top: 2px;
+	padding-left: 30px;
+}
+div.distri img.distri-logo3 {
+	margin-top: 2px;
+	padding-left: 30px;
+}
+div.certi p.certification-texte {
+	margin-top: -15px;
+	text-align: left;
+	padding-left: 2px;
+	font-size: 18px;
+	color: white;
+}
+div.certi img.certi-logo1 {
+	margin-top: -15px;
+	padding-left: 30px;
+}
+div.certi img.certi-logo2 {
+	margin-top: 2px;
+	padding-left: 30px;
+}
+div.certi img.certi-logo3 {
+	margin-top: 2px;
+	padding-left: 30px;
+}
